@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
-    printf("Compiled from file: %s\n", __FILE__);
-    return 0;
+int main(void)
+{
+	printf("Compiled from file: %s\n", __FILE__);
+	return (0);
 }
