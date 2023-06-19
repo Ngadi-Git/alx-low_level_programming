@@ -1,11 +1,6 @@
-include <stdio.h>
+#ifndef SUMM
+#define SUMM
 
-#define ABS(x) ((x) < 0 ? -(x) : (x))
+#define SUM(x, y) ((x) + (y))
 
-int main() {
-    int number = -10;
-    int absValue = ABS(number);
-
-    printf("Absolute value of %d is %d\n", number, absValue);
-    return 0;
-}
+#endif /* SUM */
