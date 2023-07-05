@@ -16,14 +16,11 @@ int sqrt_recurs_helper(int n, int start, int end)
 	mid = (start + end) / 2;
 	mid_squared = mid * mid;
 
-	if (start > end)
-		return (-1);
-
 	if (mid_squared == n)
 		return (mid);
 
 	else if (mid_squared > n)
-		return (sqrt_recurs_helper(n, start, mid - 1));
+		return (-1);
 
 	else
 		return (sqrt_recurs_helper(n, mid + 1, end));
