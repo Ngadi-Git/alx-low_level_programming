@@ -13,7 +13,7 @@ int sqrt_recurs_helper(int n, int start, int end)
 {
 	int mid, mid_squared;
 
-	mid = start + (end - start) / 2;
+	mid = (start + end) / 2;
 	mid_squared = mid * mid;
 
 	if (start > end)
