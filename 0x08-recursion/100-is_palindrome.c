@@ -45,8 +45,5 @@ int is_palindrome(char *s)
 {
 	int length = str_length(s);
 
-	while (s[length] != '\0')
-		length++;
-
 	return (is_palindrome_recurs(s, 0, length - 1));
 }
