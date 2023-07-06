@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- *is_divisible - checks if given number is divisible by any
- *		 number between 2 and its square.
+ *is_divisible - checks if given number is divisible
  *@n: the number being checked.
  @divisor: possible factor of the number.
  *
