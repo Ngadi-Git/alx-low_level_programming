@@ -4,7 +4,7 @@
  *is_divisible - checks if given number is divisible by any
  *		 number between 2 and its square.
  *@n: the number being checked.
- @divisor: possible factor (divisor) of the number.
+ @divisor: possible factor of the number.
  *
  *Return: 0 if n is not prime
  *	  1 if n is a prime number
