@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- *_str_lenght - checks the length of a string
- *@s: pointer to the string to be checked
+ * _str_lenght - checks the length of a string
+ * @s: pointer to the string to be checked
  *
  * Return: return the length of the string
-**/
+ */
 
 int _str_length(char *s)
 {
@@ -16,13 +16,13 @@ int _str_length(char *s)
 }
 
 /**
- *is_palindrome_recurs - performs recursive check for palindrome
- *@s: input string to be checked
- *@start: starting index for the substring being checked
- *@end: ending index for the substring being checked
+ * is_palindrome_recurs - performs recursive check for palindrome
+ * @s: input string to be checked
+ * @start: starting index for the substring being checked
+ * @end: ending index for the substring being checked
  *
- *Return: return 1 if string is palindrome 0 otherwise
-**/
+ * Return: return 1 if string is palindrome 0 otherwise
+ */
 
 
 int is_palindrome_recurs(char *s, int start, int end)
@@ -36,10 +36,11 @@ int is_palindrome_recurs(char *s, int start, int end)
 }
 
 /**
-  * is_palindrome - Checks if a string is a palindrome
-  * @s: is the string
-  * Return: return 1 if the string is a palindrome or 0 otherwise
-**/
+ * is_palindrome - Checks if a string is a palindrome
+ * @s: is the string
+ *
+ * Return: return 1 if the string is a palindrome or 0 otherwise
+ */
 
 int is_palindrome(char *s)
 {
