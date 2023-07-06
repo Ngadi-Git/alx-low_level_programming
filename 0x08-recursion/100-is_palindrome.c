@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _str_lenght - Checks the length of a string
+ * _str_length - Checks the length of a string
  * @s: Pointer to the string to be checked
  *
  * Return: Return the length of the string
