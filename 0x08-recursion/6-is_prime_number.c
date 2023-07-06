@@ -3,10 +3,9 @@
 /**
  *is_divisible - checks if given number is divisible
  *@n: the number being checked.
- @divisor: possible factor of the number.
+ *@divisor: possible factor of the number.
  *
- *Return: 0 if n is not prime
- *	  1 if n is a prime number
+ *Return: 0 if n is not prime, 1 if n is a prime number
  */
 
 int is_divisible(int n, int divisor)
