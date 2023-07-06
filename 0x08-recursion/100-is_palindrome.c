@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-  * str_lenght - checks the length of a string
-  * @s: is the string
-  *
-  * Return: return the length of the string
-**/
+ *str_lenght - checks the length of a string
+ *@s: is the string
+ *
+ * Return: return the length of the string
+ */
 
 int str_length(char *s)
 {
