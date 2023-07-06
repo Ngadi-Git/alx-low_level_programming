@@ -5,7 +5,7 @@
  *@s: is the string
  *
  * Return: return the length of the string
- */
+**/
 
 int str_length(char *s)
 {
@@ -22,7 +22,7 @@ int str_length(char *s)
  *@end: ending index for the substring being checked
  *
  *Return: return 1 if string is palindrome 0 otherwise
- */
+**/
 
 
 int is_palindrome_recurs(char *s, int start, int end)
