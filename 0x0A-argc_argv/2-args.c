@@ -10,10 +10,15 @@
  *Return: Always (0) success.
  */
 
-def print_arguments():
-    arguments = sys.argv[1:]  # Exclude the first argument (script name)
-    for arg in arguments:
-        print(arg)
+int main(int argc, char *argv[])
+{
+		int narg;
 
-if __name__ == "__main__":
-    print_arguments()
+		narg = 0;
+
+		while ( n < argc )
+		{
+			printf("%s\n", argv[narg]);
+			narg++;
+		}
+}
