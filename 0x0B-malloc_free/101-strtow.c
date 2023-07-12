@@ -39,7 +39,7 @@ int wordnos(char *s)
 
 char **strtow(char *str)
 {
-	char **matrix, *temp;
+	char **gridx, *temp;
 	int indx, kay = 0, lent = 0, words, cnt = 0, start, end;
 
 	while (*(str + lent))
@@ -48,11 +48,11 @@ char **strtow(char *str)
 	if (words == 0)
 		return (NULL);
 
-	matrix = (char **) malloc(sizeof(char *) * (words + 1));
-	if (matrix == NULL)
+	gridx = (char **) malloc(sizeof(char *) * (words + 1));
+	if (gridx == NULL)
 		return (NULL);
 
-	for (indx = 0; indx <= len; indx++)
+	for (indx = 0; indx <= lent; indx++)
 	{
 		if (str[indx] == ' ' || str[indx] == '\0')
 		{
@@ -65,7 +65,7 @@ char **strtow(char *str)
 				while (start < end)
 					*temp++ = str[start++];
 				*temp = '\0';
-				matrix[kay] = temp - cnt;
+				gridx[kay] = temp - cnt;
 				kay++;
 				cnt = 0;
 			}
@@ -74,7 +74,7 @@ char **strtow(char *str)
 			start = indx;
 	}
 
-	matrix[kay] = NULL;
+	gridx[kay] = NULL;
 
-	return (matrix);
+	return (gridx);
 }
