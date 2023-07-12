@@ -12,7 +12,8 @@
   */
 char *create_array(unsigned int size, char c)
 {
-	char *arrays, unsigned int i;
+	char *arrays;
+	unsigned int i;
 
 	if (size == 0)
 	{
