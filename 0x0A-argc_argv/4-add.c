@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			char *str;
 
 			str = argv[indx];
-			for (bee = 0; str[bmdx] != '\0'; bee++)
+			for (bee = 0; str[bee] != '\0'; bee++)
 			{
 				if (str[bee] < 48 || str[bee] > 57)
 				{
