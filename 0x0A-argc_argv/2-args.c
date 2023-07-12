@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- *main - prints all the arguments of a program
+ *main - prints all the arguments a program gets.
+ *
  *@argc: number of arguments
  *
  *@argv: array of arguments.
@@ -12,13 +13,11 @@
 
 int main(int argc, char *argv[])
 {
-		int narg;
+	int indx;
 
-		narg = 0;
-
-		while ( n < argc )
-		{
-			printf("%s\n", argv[narg]);
-			narg++;
-		}
+	for (indx = 0; indx < argc; indx++)
+	{
+		printf("%s\n", argv[indx]);
+	}
+	return (0);
 }
