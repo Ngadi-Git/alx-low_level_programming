@@ -10,19 +10,25 @@
   *Return: NULL if it fails or
   *Pointer to array.
   */
-
 char *create_array(unsigned int size, char c)
 {
+	char *arrays, unsigned int i;
+
 	if (size == 0)
+	{
+		return (NULL);
+	}
+
+	arrays = malloc(size * sizeof(char));
+
+
+	if (arrays == NULL)
 		return (NULL);
 
-	char *arr = malloc(size * sizeof(char));
+	for (i = 0; i < size; i++)
+		arrays[i] = c;
 
-	if (arr == NULL)
-		return (NULL);
+	return (arrays);
 
-	for (unsigned int i = 0; i < size; i++)
-		arr[i] = c;
-
-	return (arr);
+}
 }
