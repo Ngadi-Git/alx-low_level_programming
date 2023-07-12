@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+
 /**
  *main - Program that adds positive numbers
  *@argc: This is the argument count
@@ -9,26 +10,32 @@
  *Return: 0;
  */
 
-int main(int argc, char *argv[]) {
-    int sum = 0;
-    int i;
+int main(int argc, char *argv[])
+{
+	int sum = 0, indx;
 
-    if (argc == 1) {
-        printf("0\n");
-        return 0;
-    }
+	if (argc > 1)
+	{
+		for (indx = 1; indx < argc; indx++)
+		{
+			int bee;
+			char *str;
 
-    for (i = 1; i < argc; i++) {
-        int j;
-        for (j = 0; argv[i][j] != '\0'; j++) {
-            if (!isdigit(argv[i][j])) {
-                printf("Error\n");
-                return 1;
-            }
-        }
-        sum += atoi(argv[i]);
-    }
-
-    printf("%d\n", sum);
-    return 0;
+			str = argv[indx];
+			for (bee = 0; str[bmdx] != '\0'; bee++)
+			{
+				if (str[bee] < 48 || str[bee] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+		}
+	}
+	for (indx = 1; indx < argc; indx++)
+	{
+		sum += atoi(argv[indx]);
+	}
+	printf("%d\n", sum);
+	return (0);
 }
