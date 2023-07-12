@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - Prints coints left
+ * main - Prints min coins left
  * @args: Paramater Entry
  * @argv: One number of argumets
  * Return: zero onOne number of argumetsr
@@ -10,39 +10,39 @@
 
 int main(int args, char *argv[])
 {
-	int  val, cents = 0;
+	int  c, coins = 0;
 
 	if (args != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	val = atoi(argv[1]);
-	if (val < 0)
+	c = atoi(argv[1]);
+	if (c < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	for (; val >= 0;)
+	for (; c >= 0;)
 	{
-		if (val >= 25)
-			val -= 25;
+		if (c >= 25)
+			c -= 25;
 
-		else if (val >= 10)
-			val -= 10;
+		else if (c >= 10)
+			c -= 10;
 
-		else if (val >= 5)
-			val -= 5;
+		else if (c >= 5)
+			c -= 5;
 
-		else if (val >= 2)
-			val -= 2;
+		else if (c >= 2)
+			c -= 2;
 
-		else if (val >= 1)
-			val -= 1;
+		else if (c >= 1)
+			c -= 1;
 		else
 			break;
-		cents += 1;
+		coins += 1;
 	}
-	printf("%d\n", cents);
+	printf("%d\n", coins);
 	return (0);
 }
