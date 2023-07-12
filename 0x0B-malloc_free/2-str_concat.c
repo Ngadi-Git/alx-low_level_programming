@@ -31,7 +31,7 @@ char *_strdup(char *str)
 	if (new_str == NULL)
 		return (NULL);
 
-	for (ind = 0; ind < len; ind++)
+	for (ind = 0; ind < lent; ind++)
 		new_str[ind] = str[ind];
 
 	new_str[lent] = '\0';
