@@ -28,8 +28,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (!ptr)
 		return (malloc(new_size));
 
-	ptr1 = malloc(new_size);
-	if (!ptr1)
+	pt1 = malloc(new_size);
+	if (!pt1)
 		return (NULL);
 
 	old_ptr = ptr;
