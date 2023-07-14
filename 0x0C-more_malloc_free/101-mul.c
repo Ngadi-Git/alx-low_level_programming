@@ -12,19 +12,20 @@
  */
 void _print(char *str, int l)
 {
-	int indx, j;
+	int indx;
 
-	indx = j = 0;
-	while (indx < l)
+	int j = 0;
+
+	for (indx = 0; indx < l; indx++)
 	{
 		if (str[indx] != '0')
 			j = 1;
+
 		if (j || indx == l - 1)
-			_putchar(str[indx]);
-		indx++;
+			putchar(str[indx]);
 	}
 
-	_putchar('\n');
+	putchar('\n');
 	free(str);
 }
 
@@ -40,29 +41,41 @@ void _print(char *str, int l)
  */
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
-	int j, k, mul, mulrem, add, addrem;
+	int j, k;
 
-	mulrem = addrem = 0;
+	int mulrem = 0;
+	int addrem = 0;
+
 	for (j = num_index, k = dest_index; j >= 0; j--, k--)
 	{
-		mul = (n - '0') * (num[j] - '0') + mulrem;
+		int mul = (n - '0') * (num[j] - '0') + mulrem;
+
 		mulrem = mul / 10;
-		add = (dest[k] - '0') + (mul % 10) + addrem;
+
+		int add = (dest[k] - '0') + (mul % 10) + addrem;
+
 		addrem = add / 10;
+
 		dest[k] = add % 10 + '0';
 	}
-	for (addrem += mulrem; k >= 0 && addrem; k--)
+
+	for (addrem += mulrem; dest_index >= 0 && addrem; dest_index--)
 	{
-		add = (dest[k] - '0') + addrem;
+		int add = (dest[dest_index] - '0') + addrem;
+
 		addrem = add / 10;
-		dest[k] = add % 10 + '0';
+
+		dest[dest_index] = add % 10 + '0';
 	}
+
 	if (addrem)
 	{
 		return (NULL);
 	}
+
 	return (dest);
 }
+
 /**
  * check_for_digits - checks the arguments to ensure they are digits
  * @av: pointer to arguments
