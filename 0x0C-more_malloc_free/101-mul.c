@@ -93,20 +93,21 @@ int check_for_digits(char **av)
  */
 void init(char *str, int l)
 {
-	int i;
+	int indx;
 
-	for (i = 0; i < l; i++)
+	for (indx = 0; indx < l; indx++)
 		str[i] = '0';
-	str[i] = '\0';
+	str[indx] = '\0';
 }
 
 /**
  * main - multiply two numbers
- * @argc: number of arguments
+ * @argc: total count of arguments
  * @argv: argument vector
  *
  * Return: zero, or exit status of 98 if failure
  */
+
 int main(int argc, char *argv[])
 {
 	int l1, l2, ln, ti, i;
