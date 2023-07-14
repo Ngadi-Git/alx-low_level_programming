@@ -29,7 +29,7 @@ int strlent(char *string)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int nmber, length, i, j;
+	int number, length, i, j;
 
 	number = n;
 
