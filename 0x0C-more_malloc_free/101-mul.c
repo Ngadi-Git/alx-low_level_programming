@@ -12,16 +12,16 @@
  */
 void _print(char *str, int l)
 {
-	int i, j;
+	int indx, j;
 
-	i = j = 0;
-	while (i < l)
+	indx = j = 0;
+	while (indx < l)
 	{
-		if (str[i] != '0')
+		if (str[indx] != '0')
 			j = 1;
-		if (j || i == l - 1)
-			_putchar(str[i]);
-		i++;
+		if (j || indx == l - 1)
+			_putchar(str[indx]);
+		indx++;
 	}
 
 	_putchar('\n');
@@ -38,7 +38,7 @@ void _print(char *str, int l)
  *
  * Return: pointer to dest, or NULL on failure
  */
-char *mul(char n, char *num, int num_index, char *dest, int dest_index)
+char *mul(char , char *num, int num_index, char *dest, int dest_index)
 {
 	int j, k, mul, mulrem, add, addrem;
 
