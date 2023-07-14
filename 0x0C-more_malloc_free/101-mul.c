@@ -41,42 +41,27 @@ void _print(char *str, int l)
  */
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
-	int j, k;
+	int j, k, mul, mulrem, add, addrem;
 
-	int mulrem = 0;
-	int addrem = 0;
-
+	mulrem = addrem = 0;
 	for (j = num_index, k = dest_index; j >= 0; j--, k--)
 	{
-		int add, mul;
-
 		mul = (n - '0') * (num[j] - '0') + mulrem;
-
 		mulrem = mul / 10;
-
 		add = (dest[k] - '0') + (mul % 10) + addrem;
-
 		addrem = add / 10;
-
 		dest[k] = add % 10 + '0';
 	}
-
-	for (addrem += mulrem; dest_index >= 0 && addrem; dest_index--)
+	for (addrem += mulrem; k >= 0 && addrem; k--)
 	{
-		int add;
-		
-		add = (dest[dest_index] - '0') + addrem;
-
+		add = (dest[k] - '0') + addrem;
 		addrem = add / 10;
-
-		dest[dest_index] = add % 10 + '0';
+		dest[k] = add % 10 + '0';
 	}
-
 	if (addrem)
 	{
 		return (NULL);
 	}
-
 	return (dest);
 }
 
