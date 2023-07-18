@@ -7,7 +7,7 @@
   *@age: member 2.
   *@owner: member 3.
   *
-  *Return: NULL if it fails.
+  *Return: NULL if the funtion fails.
   */
 dog_t *new_dog(char *name, float age, char *owner)
 {
