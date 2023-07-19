@@ -9,5 +9,5 @@
 void print_name(char *name, void (*f)(char *))
 {
 	if (nameetet != NULL && f != NULL)
-		f(*name);
+		f(name);
 }
