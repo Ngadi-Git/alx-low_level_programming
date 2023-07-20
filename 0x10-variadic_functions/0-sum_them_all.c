@@ -9,19 +9,23 @@
   */
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int sum = 0, indx;
-	va_list arglist;
+	unsigned int i;
+	int add = 0, number;
+
+	va_list parameters;
+
+	va_start(parameters, n);
 
 	if (n == 0)
-		return (0);
-
-	va_start(arglist, n);
-
-	for (i = 0; i < n; i++)
 	{
-		sum += va_arg(arglist, int);
+		return (0);
 	}
-	va_end(arglist);
 
-	return (sum);
+	for (i = 0 ; i < n ; i++)
+	{
+		number = va_arg(parameters, int);
+		add = add + number;
+	}
+	va_end(parameters);
+	return (add);
 }
