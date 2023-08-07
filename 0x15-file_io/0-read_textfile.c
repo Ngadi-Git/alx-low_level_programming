@@ -1,4 +1,9 @@
 #include "main.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdlib.h>
 
 /**
  * read_textfile - reads a text file and prints it to the POSIX standard output
@@ -30,11 +35,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buff);
 	}
 
-	bytesWritten = write(STDOUT_FILENO, buff, bytesWritten);
+	bytesWritten = write(STDOUT_FILENO, buff, bytesRead);
 	free(buff);
 
 	if (bytesRead != bytesWritten)
 		return (0);
 	return (bytesWritten);
-	close(fileDesc);
 }
