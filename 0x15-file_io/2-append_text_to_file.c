@@ -23,16 +23,15 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		for (c_letters = 0; text_content[c_letters]; c_letters)
+		for (c_letters = 0; text_content[c_letters]; c_letters++)
 			;
-
-		bytesW = write(fd, text_content, c_letters);
+		bytesW = write(fileDesc, text_content, c_letters);
 
 		if (bytesW == -1)
 			return (-1);
 	}
 
 	close(fileDesc);
-i
+
 	return (1);
 }
