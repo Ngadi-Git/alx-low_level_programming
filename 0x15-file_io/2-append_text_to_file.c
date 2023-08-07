@@ -23,9 +23,8 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		c_letters = 0;
-		while (text_content[nletters])
-			nletters++;
+		for (c_letters = 0; text_content[c_letters]; c_letters)
+			;
 
 		bytesW = write(fd, text_content, c_letters);
 
@@ -34,6 +33,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 
 	close(fileDesc);
-
+i
 	return (1);
 }
