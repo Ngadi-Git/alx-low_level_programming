@@ -8,18 +8,17 @@
  *
  * Return: 1 if it worked, -1 if it didn't.
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int x_r, bts;
+	unsigned int tmp;
 
-	x_r = n ^ m;
-	bts = 0;
+	if (index >= 62)
+		return (-1);
 
-	while (x_r > 0)
-	{
-		bits += (x_r & 1);
-		x_r >>= 1;
-	}
+	tmp = 1 << index;
 
-	return (bits);
+	if (*n & tmp)
+		*n ^= tmp;
+
+	return (1);
 }

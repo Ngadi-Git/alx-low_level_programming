@@ -1,27 +1,25 @@
 #include "main.h"
 
 /**
- * flip_bits - returns the number of bits you would
- * need to flip to get from one number to another
- * @n: number one.
- * @m: number two.
+ * clear_bit - sets the value of a bit to 0.
+ * at a given index.
+ * @n: pointer of an unsigned long int.
+ * @index: index of the bit.
  *
- * Return: number of bits.
+ * Return: 1 if it worked, -1 if it didn't.
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int bts;
-	
-	bits = 0;
+	unsigned long int x_r, bts;
 
-	while (n || m)
+	x_r = n ^ m;
+	bts = 0;
+
+	while (x_r > 0)
 	{
-		if ((n & 1) != (m & 1))
-			bts++;
-
-		n >>= 1;
-		m >>= 1;
+		bits += (x_r & 1);
+		x_r >>= 1;
 	}
 
-	return (bts);
+	return (bits);
 }
