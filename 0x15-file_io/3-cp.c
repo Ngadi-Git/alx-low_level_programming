@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 
+void error_file(int fileRead, int fileWr, char *argv[]);
+
 /**
  * error_file - checks if files can be opened.
  * @fileRead: file read.
