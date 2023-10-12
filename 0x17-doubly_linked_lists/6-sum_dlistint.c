@@ -9,9 +9,9 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int total;
+	int sum;
 
-	total = 0;
+	sum = 0;
 
 	if (head != NULL)
 	{
@@ -25,5 +25,5 @@ int sum_dlistint(dlistint_t *head)
 		}
 	}
 
-	return (total);
+	return (sum);
 }
