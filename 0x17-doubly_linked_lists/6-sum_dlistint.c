@@ -6,17 +6,19 @@
  * 
  * Return: Sum of all data, 0 if the list is empty
  */
+
 int sum_dlistint(dlistint_t *head)
 {
 	int sum = 0;
-	dlistint_t *current = head;
 
-	while (current != NULL)
+	if (head == NULL)
+		return 0;
+
+	while (head != NULL)
 	{
-		sum += current->n;
-		current = current->next;
+		sum += head->n;
+		head = head->next;
 	}
 
 	return (sum);
-}	
 }
