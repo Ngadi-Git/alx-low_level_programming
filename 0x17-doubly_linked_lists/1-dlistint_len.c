@@ -9,7 +9,7 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	int nods = 0;
+	size_t nods = 0;
 
 	if (h == NULL)
 		return (nods);
