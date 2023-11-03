@@ -3,10 +3,10 @@
 /**
  * key_index - Get the index at which a key/value pair should
  *             be stored in array of a hash table.
- * @key: The key to get the index of.
+ * @key: The key to retrive the index of.
  * @size: The size of the array of the hash table.
  *
- * Return: The index of the key.
+ * Return: The index corresponding to the hash of the key in the array.
  *
  * Description: Uses the djb2 algorithm.
  */
