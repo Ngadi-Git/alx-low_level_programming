@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 
-void error_file(int fileRead, int fileWr, char *argv[]);
-
 /**
  * error_file - checks if files can be opened.
  * @fileRead: file read.
@@ -33,9 +31,7 @@ void error_file(int fileRead, int fileWr, char *argv[])
 int main(int argc, char *argv[])
 {
 	int fileRead, fileWr, f_close;
-	ssize_t c_chars; 
-	ssize_t bytesRW;
-
+	ssize_t c_chars, bytesRW;
 	char buf[1024];
 
 	if (argc != 3)
